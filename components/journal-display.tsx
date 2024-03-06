@@ -4,7 +4,7 @@ import { Article } from "@/types";
 import useSWR from "swr";
 
 const JournalDisplay = () => {
-	const { data, error } = useSWR("http://localhost:3000/api/journals", (url: string) =>
+	const { data, error } = useSWR("https://win-journal.vercel.app/api/journals", (url: string) =>
 		fetch(url).then((res) => res.json())
 	);
 	console.log(data);
