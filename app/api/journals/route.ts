@@ -8,8 +8,10 @@ export async function GET(req: NextRequest) {
 
 	// connect to database
 	const db = await journalDBConnect();
+	console.log("connected to db");
 	// get all articles
 	const articles = await db.Article.find({}).exec();
+	console.log("got journals");
 
 	return new Response(JSON.stringify(articles), {
 		status: 200,

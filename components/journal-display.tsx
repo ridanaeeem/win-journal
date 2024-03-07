@@ -4,9 +4,8 @@ import { Article } from "@/types";
 import useSWR from "swr";
 
 const JournalDisplay = () => {
-	const { data, error } = useSWR("https://win-journal.vercel.app/api/journals", (url: string) =>
-		fetch(url).then((res) => res.json())
-	);
+	const { data, error } = useSWR("/api/journals", (url: string) => fetch(url).then((res) => res.json()));
+	console.log("logging data");
 	console.log(data);
 	if (error) return <div>failed to load</div>;
 	if (!data) return <div>loading...</div>;
