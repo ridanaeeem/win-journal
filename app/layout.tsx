@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import Nav from "@/components/nav";
+import Logo from "@/components/logo";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -15,6 +17,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
+				<div className="flex flex-row sticky top-0">
+					<Logo />
+					<Nav />
+				</div>
 				{children}
 				<Analytics />
 			</body>
