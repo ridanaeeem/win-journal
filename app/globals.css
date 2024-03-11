@@ -26,8 +26,49 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
-@layer utilities {
+/* @layer utilities {
 	.text-balance {
 		text-wrap: balance;
 	}
+} */
+
+.title {
+	font-family: "Merriweather";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 6vw;
+}
+
+/* card animations */
+/* Code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card */
+.card {
+	width: 30vw;
+	height: 20vh;
+	perspective: 1000px;
+}
+
+.inner {
+	/* position: relative; */
+	width: 100%;
+	height: 100%;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .inner {
+	transform: rotateY(180deg);
+}
+
+.front,
+.back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.back {
+	transform: rotateY(180deg);
 }
