@@ -16,9 +16,9 @@ function AboutCard({
 	email: string;
 }) {
 	return (
-		<div className="card m-4 align-center">
+		<div className="card m-4 align-center text-black">
 			<div className="inner">
-				<div className="front flex items-center p-6">
+				<div className="front flex items-center p-6 bg-[#ffffff]">
 					<Image src={image} height={100} alt={name}></Image>
 					<div className="flex flex-col pl-4">
 						<h2 className="text-3xl">{name}</h2>
@@ -28,7 +28,7 @@ function AboutCard({
 						</h3>
 					</div>
 				</div>
-				<div className="back p-4">
+				<div className="back p-4 bg-[#ffffff]">
 					<p>{description}</p>
 				</div>
 			</div>
@@ -40,8 +40,8 @@ export default function About() {
 	return (
 		<div>
 			<title>About</title>
-			<main className="flex min-h-screen flex-col items-center p-24">
-				<h1>About Us</h1>
+			<main className="flex min-h-screen flex-col items-center">
+				<h1 className="subtitle">About Us</h1>
 				<div className="flex flex-wrap justify-center">
 					<AboutCard
 						name="Maxine Hsiung"

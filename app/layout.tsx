@@ -18,7 +18,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<div className="flex flex-row sticky top-0 bg-[#ffffff] z-10">
+				<div className="flex flex-row sticky top-0 bg-black z-10 text-white text-xl">
 					<Logo />
 					<Nav />
 				</div>

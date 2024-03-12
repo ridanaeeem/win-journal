@@ -2,41 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
-/* @layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
-} */
-
-.title {
+* {
 	font-family: "Merriweather";
 	font-style: normal;
+}
+
+.title {
+	/* font-family: "Merriweather";
+	font-style: normal; */
 	font-weight: 400;
 	font-size: 6vw;
+	line-height: 1;
+}
+
+.subtitle {
+	/* font-family: "Merriweather";
+	font-style: normal; */
+	font-weight: 400;
+	font-size: 3vw;
+	text-align: center;
+}
+
+main {
+	background-color: #1c1d31;
+	color: white;
+}
+
+.bg-gradient {
+	background-image: radial-gradient(farthest-corner at 40px 40px, #f35 0%, #43e 100%);
+	background-image: radial-gradient(farthest-corner at 40px 40px, #4433ee 0%, #1c1d31 100%);
 }
 
 /* card animations */
@@ -53,7 +47,9 @@ body {
 	height: 100%;
 	transition: transform 0.6s;
 	transform-style: preserve-3d;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+	/* border: 20px solid rgb(49, 59, 103);
+	border-radius: 40%; */
 }
 
 .card:hover .inner {
@@ -67,6 +63,8 @@ body {
 	height: 100%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	/* border: 1px solid white;
+	border-radius: 5%; */
 }
 
 .back {
