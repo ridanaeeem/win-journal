@@ -16,6 +16,7 @@ const config: Config = {
 				mainbg: "#1c1d31",
 				white: "#ffffff",
 				black: "#000000",
+				mainlight: "#897ff7",
 			},
 		},
 	},

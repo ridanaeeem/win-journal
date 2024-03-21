@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Nav from "@/components/nav";
-import Logo from "@/components/logo";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -18,10 +17,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<div className="flex flex-row sticky top-0 bg-black z-10 text-white text-xl">
-					<Logo />
-					<Nav />
-				</div>
+				<Nav />
 				{children}
 				<Footer />
 				<Analytics />
