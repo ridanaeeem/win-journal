@@ -29,10 +29,6 @@ main {
 	background-image: radial-gradient(farthest-corner at 40px 40px, #4433ee 0%, #1c1d31 100%);
 }
 
-.book {
-	border: red solid 1px;
-	margin: auto;
-}
 /* card animations */
 /* Code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card */
 .card {
