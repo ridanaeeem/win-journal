@@ -36,7 +36,30 @@ export default function Journals() {
 			<main>
 				<h1 className="subtitle">All Journals</h1>
 				<div className="book">
-					<HTMLFlipBook width={600} height={850} showCover={true} className="m-auto">
+					<HTMLFlipBook
+						width={600}
+						height={850}
+						showCover={true}
+						className="m-auto"
+						style={{ color: "black" }}
+						startPage={0}
+						size={"fixed"}
+						minWidth={0}
+						maxWidth={1000}
+						minHeight={0}
+						maxHeight={1000}
+						drawShadow={true}
+						flippingTime={1000}
+						usePortrait={false}
+						startZIndex={0}
+						autoSize={true}
+						maxShadowOpacity={1}
+						mobileScrollSupport={false}
+						clickEventForward={true}
+						useMouseEvents={true}
+						swipeDistance={30}
+						showPageCorners={true}
+						disableFlipByClick={false}>
 						{renderPDFPages()}
 					</HTMLFlipBook>
 				</div>
