@@ -8,16 +8,12 @@
 }
 
 .title {
-	/* font-family: "Merriweather";
-	font-style: normal; */
 	font-weight: 400;
-	font-size: 6vw;
+	/* font-size: 6vw; */
 	line-height: 1;
 }
 
 .subtitle {
-	/* font-family: "Merriweather";
-	font-style: normal; */
 	font-weight: 400;
 	font-size: 3vw;
 	text-align: center;
