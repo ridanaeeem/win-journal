@@ -3,8 +3,7 @@ export type Article = {
 	title: string;
 	author: string;
 	keywords: string[];
-	created_at: Date;
-	updated_at: Date;
+	issue_date: string;
 	tags: string[];
 	content: string;
 	abstract: string;
