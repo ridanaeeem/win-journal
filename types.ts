@@ -19,5 +19,6 @@ export type Article = {
 export type Journal = {
 	_id: string;
 	issue: string;
+	issue_date: string;
 	path: string;
 };
