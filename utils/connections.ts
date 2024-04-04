@@ -7,6 +7,7 @@ dotenv.config();
 
 const MONGODB_URL = process.env.MONGODB_URL;
 const DB_COLLECTION = process.env.DB_COLLECTION;
+const DB_JOURNALS = process.env.DB_JOURNALS;
 
 // connection function
 export const journalDBConnect = async () => {
@@ -34,4 +35,22 @@ export const journalDBConnect = async () => {
 	const Article = mongoose.models.Article || mongoose.model("Article", ArticleSchema, DB_COLLECTION);
 
 	return { conn, Article };
+};
+
+export const journalsDBConnect = async () => {
+	const conn = await mongoose.connect(MONGODB_URL as string).catch((err) => console.log(err));
+	if (!conn) {
+		console.log("Connection Error");
+		throw new Error("Connection Error");
+	}
+
+	// create schema
+	const JournalSchema = new mongoose.Schema({
+		issue: { type: String, required: true },
+		path: { type: String, required: true },
+	});
+
+	const Journal = mongoose.models.Journal || mongoose.model("Journal", JournalSchema, DB_JOURNALS);
+
+	return { conn, Journal };
 };

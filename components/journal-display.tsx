@@ -10,6 +10,7 @@ const JournalDisplay = () => {
 	if (error) return <div>failed to load</div>;
 	if (!data) return <div>loading...</div>;
 	const articles = data;
+
 	return (
 		<div>
 			<h1>Journal Entries</h1>

@@ -1,5 +1,5 @@
 import { type NextRequest } from "next/server";
-import { journalDBConnect } from "@/utils/connection";
+import { journalDBConnect } from "@/utils/connections";
 
 export const dynamic = "force-dynamic";
 

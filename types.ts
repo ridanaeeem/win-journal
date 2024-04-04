@@ -15,3 +15,9 @@ export type Article = {
 	acknowledgements: string;
 	references: string;
 };
+
+export type Journal = {
+	_id: string;
+	issue: string;
+	path: string;
+};
