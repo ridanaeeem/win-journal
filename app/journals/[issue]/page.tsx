@@ -1,10 +1,12 @@
 import { Journal } from "@/types";
 import JournalDisplay from "@/components/journal-display";
 
+// the currently published issues - automate this
 export async function generateStaticParams() {
 	return [{ issue: "0" }, { issue: "1" }];
 }
 
+// gets the journal with the correct issue number
 async function getJournal(params: { issue: any }) {
 	// console.log("params");
 	// console.log(params);
@@ -18,7 +20,7 @@ async function getJournal(params: { issue: any }) {
 	// console.log(journals[Number(params.issue)]);
 	return journals[Number(params.issue)];
 }
-
+// displays the journal with the specified issue number of that page
 export default async function Journal({ params }: { params: { issue: any } }) {
 	const journal = await getJournal(params);
 
