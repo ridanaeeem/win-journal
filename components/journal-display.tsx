@@ -1,36 +1,70 @@
 "use client";
-import Link from "next/link";
-import { Article } from "@/types";
+import HTMLFlipBook from "react-pageflip";
+import { Journal } from "@/types";
+import { pdfjs, Document, Page } from "react-pdf";
+import { useState } from "react";
 import useSWR from "swr";
+import "react-pdf/dist/Page/AnnotationLayer.css";
 
-const JournalDisplay = () => {
-	const { data, error } = useSWR("/api/journals", (url: string) => fetch(url).then((res) => res.json()));
-	console.log("logging data");
-	console.log(data);
-	if (error) return <div>failed to load</div>;
-	if (!data) return <div>loading...</div>;
-	const articles = data;
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+
+export default function JournalDisplay({ path }: { path: string }) {
+	const [numPages, setNumPages] = useState<number>(1);
+
+	// const path = "/zombayes.pdf";
+
+	const onload = ({ numPages }: { numPages: number }) => {
+		setNumPages(numPages);
+	};
+
+	const renderPDFPages = (path: string) => {
+		const pages = [];
+		for (let i = 1; i <= numPages; i++) {
+			pages.push(
+				<div key={i} className="demoPage bg-white text-black">
+					<Document file={path} onLoadSuccess={onload}>
+						<Page pageNumber={i} renderTextLayer={false} />
+					</Document>
+				</div>
+			);
+		}
+		return pages;
+	};
 
 	return (
 		<div>
-			<h1>Journal Entries</h1>
-			<ul>
-				{articles.map((article: Article, i: number) => (
-					<div key={i}>
-						<h1 className="text-3xl">{article.title}</h1>
-						<p>{article.keywords}</p>
-						<p>{article.content}</p>
-						<div>{article.introduction}</div>
-						<div>{article.methods}</div>
-						<div>{article.results}</div>
-						<div>{article.discussion}</div>
-						<div>{article.acknowledgements}</div>
-						<div>{article.references}</div>
-					</div>
-				))}
-			</ul>
+			<title>Journals</title>
+			<main>
+				<h1 className="subtitle">All Journals</h1>
+				<div>
+					<HTMLFlipBook
+						width={600}
+						height={850}
+						showCover={true}
+						className="m-auto"
+						style={{ color: "black" }}
+						startPage={0}
+						size={"fixed"}
+						minWidth={0}
+						maxWidth={1000}
+						minHeight={0}
+						maxHeight={1000}
+						drawShadow={true}
+						flippingTime={1000}
+						usePortrait={false}
+						startZIndex={0}
+						autoSize={true}
+						maxShadowOpacity={1}
+						mobileScrollSupport={false}
+						clickEventForward={true}
+						useMouseEvents={true}
+						swipeDistance={30}
+						showPageCorners={true}
+						disableFlipByClick={false}>
+						{renderPDFPages(path)}
+					</HTMLFlipBook>
+				</div>
+			</main>
 		</div>
 	);
-};
-
-export default JournalDisplay;
+}

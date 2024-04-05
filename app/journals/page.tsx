@@ -1,5 +1,5 @@
 "use client";
-import JournalDisplay from "@/components/journal-display";
+import ArticleDisplay from "@/components/article-display";
 import HTMLFlipBook from "react-pageflip";
 import Image from "next/image";
 import { Journal } from "@/types";
@@ -78,7 +78,7 @@ export default function Journals() {
 						</div>
 					))}
 				</div>
-				<JournalDisplay />
+				<ArticleDisplay />
 			</main>
 		</div>
 	);
