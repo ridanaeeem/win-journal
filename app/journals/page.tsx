@@ -19,8 +19,8 @@ export default function Journals() {
 			<main>
 				<h1 className="subtitle">All Journals</h1>
 				<div className="flex justify-evenly text-6xl p-10">
-					<Link href="/journals/0">Issue 0</Link>
-					<Link href="/journals/1">Issue 1</Link>
+					<Link href="/journals/spring-2024">Spring 2024</Link>
+					<Link href="/journals/fall-2025">Fall 2025</Link>
 				</div>
 				<ArticleDisplay />
 			</main>
