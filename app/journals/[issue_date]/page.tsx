@@ -1,4 +1,4 @@
-import { Journal } from "@/types";
+import type { Journal } from "@/types";
 import JournalDisplay from "@/components/journal-display";
 
 // the dates of currently published issues - automate this
