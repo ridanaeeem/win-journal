@@ -32,7 +32,7 @@ export const journalsDBConnect = async () => {
 
 // getting all of individual articles
 // connection function
-export const journalDBConnect = async () => {
+export const articlesDBConnect = async () => {
 	const conn = await mongoose.connect(MONGODB_URL as string).catch((err) => console.log(err));
 	if (!conn) {
 		console.log("Connection Error");

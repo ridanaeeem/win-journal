@@ -1,5 +1,5 @@
 import { type NextRequest } from "next/server";
-import { journalDBConnect } from "@/utils/connections";
+import { articlesDBConnect } from "@/utils/connections";
 
 export const dynamic = "force-dynamic";
 
@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
 	// can add search params here to filter articles
 
 	// connect to database
-	const db = await journalDBConnect();
+	const db = await articlesDBConnect();
 	console.log("connected to db");
 	// get all articles
 	const articles = await db.Article.find({}).exec();
