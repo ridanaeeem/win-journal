@@ -4,15 +4,18 @@ export type Article = {
 	author: string;
 	keywords: string[];
 	issue_date: string;
-	tags: string[];
-	content: string;
+	// tags: string[];
+	// content: string;
 	abstract: string;
 	introduction: string;
 	methods: string;
 	results: string;
 	discussion: string;
+	conclusion: string;
+	author_email: string;
 	acknowledgements: string;
 	references: string;
+	path: string;
 };
 
 export type Journal = {

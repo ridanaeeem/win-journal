@@ -19,7 +19,7 @@ export default function ArticleDisplay() {
 					<div key={i}>
 						<h1 className="text-3xl">{article.title}</h1>
 						<p>{article.keywords}</p>
-						<p>{article.content}</p>
+						{/* <p>{article.content}</p> */}
 						<div>{article.introduction}</div>
 						<div>{article.methods}</div>
 						<div>{article.results}</div>

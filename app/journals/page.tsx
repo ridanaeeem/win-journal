@@ -1,9 +1,7 @@
-// "use client";
 import ArticleDisplay from "@/components/article-display";
 import Link from "next/link";
 // import { Journal } from "@/types";
 // import { useState } from "react";
-import useSWR from "swr";
 
 export default function Journals() {
 	// const { data, error } = useSWR("/api/journal", (url: string) => fetch(url).then((res) => res.json()));
