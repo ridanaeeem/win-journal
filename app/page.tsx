@@ -21,7 +21,7 @@ export default function Home() {
 					</h3>
 				</div>
 				<div className="w-full p-24 text-xl">
-					<h3>Journal description</h3>
+					<h3>Journal description 2, probably put the latest one here as flippable pdf or something</h3>
 				</div>
 			</main>
 		</div>
