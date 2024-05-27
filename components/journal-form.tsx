@@ -28,7 +28,7 @@ export default function JournalForm() {
 					<label htmlFor="lab">Where did you conduct your research?</label>
 					<input type="text" id="lab" name="lab" required className="formfield" />
 
-					<label htmlFor="labLink">Provide a link to your lab's website</label>
+					<label htmlFor="labLink">Provide a link to your lab&apos;s website</label>
 					<input type="text" id="labLink" name="labLink" required className="formfield" />
 
 					<label htmlFor="labSummary">Provide a one sentence summary of what your lab specializes in.</label>
@@ -79,14 +79,25 @@ export default function JournalForm() {
 					</div>
 
 					<label htmlFor="link">
-						Provide the Google drive link to your article.
-						<br></br>
+						Provide the Google drive link to your article, which should follow{" "}
+						<a
+							href="https://docs.google.com/document/d/1wekOQ_Q9t2EQ_3mdYEgwyDzdSS9esw1C3d0iuAf_vwc/edit?usp=sharing"
+							className="text-mainlight">
+							this template
+						</a>
+						.<br></br>
 						*Make sure that anyone with the link can view!
 					</label>
 					<input type="text" id="link" name="link" required className="formfield"></input>
 
 					<label htmlFor="approval">
-						Provide the Google drive link to this form, signed by your Principal Investigator.
+						Provide the Google drive link to{" "}
+						<a
+							href="https://docs.google.com/document/d/1wekOQ_Q9t2EQ_3mdYEgwyDzdSS9esw1C3d0iuAf_vwc/edit?usp=sharing"
+							className="text-mainlight">
+							this form (link not updated yet)
+						</a>
+						, signed by your Principal Investigator.
 					</label>
 					<input type="text" id="approval" name="approval" required className="formfield"></input>
 				</div>
