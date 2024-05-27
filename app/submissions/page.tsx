@@ -5,7 +5,7 @@ export default function Submissions() {
 	return (
 		<div>
 			<title>Submissions</title>
-			<main>
+			<main className="h-full">
 				<h1 className="subtitle">Submissions</h1>
 				<p className="p-5 text-2xl">
 					We are thrilled you would like to submit an article to our journal! We are currently accepting
