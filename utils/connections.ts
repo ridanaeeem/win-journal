@@ -9,6 +9,7 @@ const MONGODB_URL = process.env.MONGODB_URL;
 const DB_JOURNALS = process.env.DB_JOURNALS;
 const DB_COLLECTION = process.env.DB_COLLECTION;
 const DB_SUBMISSIONS = process.env.DB_SUBMISSIONS;
+const DB_SUBMITTEDISSUE = process.env.DB_SUBMITTEDISSUE;
 
 // getting all of the journals
 // connection function
@@ -89,4 +90,35 @@ export const submissionsDBConnect = async () => {
 	const Submission = mongoose.models.Submission || mongoose.model("Submission", SubmissionSchema, DB_SUBMISSIONS);
 
 	return { conn, Submission };
+};
+
+// connection function
+export const submittedIssuesDBConnect = async () => {
+	const conn = await mongoose.connect(MONGODB_URL as string).catch((err) => console.log(err));
+	if (!conn) {
+		console.log("Connection Error");
+		throw new Error("Connection Error");
+	}
+
+	// create schema
+	const SubmittedIssueSchema = new mongoose.Schema({
+		author: { type: String, required: true },
+		email: { type: String, required: true },
+		buID: { type: String, required: true },
+		major: { type: String, required: true },
+		gradYear: { type: String, required: true },
+		lab: { type: String, required: true },
+		labLink: { type: String, required: true },
+		labSummary: { type: String, required: true },
+		length: { type: String, required: true },
+		title: { type: String, required: true },
+		subsection: { type: String, required: true },
+		articleLink: { type: String, required: true },
+		approval: { type: String, required: true },
+	});
+
+	const IssueSubmission =
+		mongoose.models.IssueSubmission || mongoose.model("IssueSubmission", SubmittedIssueSchema, DB_SUBMITTEDISSUE);
+
+	return { conn, IssueSubmission };
 };

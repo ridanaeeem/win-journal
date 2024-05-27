@@ -4,7 +4,7 @@ export default function JournalForm() {
 	return (
 		<div>
 			<h2 className="m-10 text-4xl text-center text-mainlight">Journal application</h2>
-			<form action="" method="post" className="flex flex-col text-xl m-10 pb-20 mt-5">
+			<form action="/api/issueSubmission" method="post" className="flex flex-col text-xl m-10 pb-20 mt-5">
 				<div className="flex flex-col pb-5">
 					<h3 className="text-4xl text-mainlight">Information about you</h3>
 					<label htmlFor="author">Full Name</label>
@@ -78,7 +78,7 @@ export default function JournalForm() {
 						</div>
 					</div>
 
-					<label htmlFor="link">
+					<label htmlFor="articleLink">
 						Provide the Google drive link to your article, which should follow{" "}
 						<a
 							href="https://docs.google.com/document/d/1wekOQ_Q9t2EQ_3mdYEgwyDzdSS9esw1C3d0iuAf_vwc/edit?usp=sharing"
@@ -88,7 +88,7 @@ export default function JournalForm() {
 						.<br></br>
 						*Make sure that anyone with the link can view!
 					</label>
-					<input type="text" id="link" name="link" required className="formfield"></input>
+					<input type="text" id="articleLink" name="articleLink" required className="formfield"></input>
 
 					<label htmlFor="approval">
 						Provide the Google drive link to{" "}
@@ -102,7 +102,9 @@ export default function JournalForm() {
 					<input type="text" id="approval" name="approval" required className="formfield"></input>
 				</div>
 
-				{/* <button type="submit">Submit</button> */}
+				<button type="submit" className="rounded-xl bg-mainlight mx-auto p-5 px-10">
+					Submit
+				</button>
 			</form>
 		</div>
 	);
