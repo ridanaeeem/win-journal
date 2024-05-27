@@ -32,6 +32,17 @@ main {
 .formfield {
 	color: black;
 }
+
+.radio-input {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+form label {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
 /* card animations */
 /* Code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card */
 .card {
