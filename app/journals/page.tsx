@@ -16,7 +16,7 @@ export default function Journals() {
 	return (
 		<div>
 			<title>Journals</title>
-			<main>
+			<main className="min-h-screen ">
 				<h1 className="subtitle">All Journals</h1>
 				<div className="flex justify-evenly text-6xl p-10">
 					<Link href="/journals/spring-2024">Spring 2024</Link>
