@@ -120,3 +120,24 @@ export const submittedArticlesDBConnect = async () => {
 
 	return { conn, ArticleSubmission };
 };
+
+// connection function for contact form
+export const contactDBConnect = async () => {
+	const conn = await mongoose.connect(MONGODB_URL as string).catch((err) => console.log(err));
+	if (!conn) {
+		console.log("Connection Error");
+		throw new Error("Connection Error");
+	}
+
+	// create schema
+	const ContactSchema = new mongoose.Schema({
+		name: { type: String, required: true },
+		email: { type: String, required: true },
+		message: { type: String, required: true },
+	});
+
+	const ContactSubmission =
+		mongoose.models.ContactSubmission || mongoose.model("ContactSubmission", ContactSchema, DB_SUBMITTED_ARTICLE);
+
+	return { conn, ContactSubmission };
+};
