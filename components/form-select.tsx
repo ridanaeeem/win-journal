@@ -23,7 +23,7 @@ export default function FormSelect() {
 					onChange={onOptionChange}
 				/>
 				<label htmlFor="journal" className="radio-input">
-					Journal
+					<span className={formType === "journal" ? "text-mainlight" : "text-white"}>Journal</span>
 				</label>
 				<input
 					type="radio"
@@ -34,7 +34,7 @@ export default function FormSelect() {
 					onChange={onOptionChange}
 				/>
 				<label htmlFor="article" className="radio-input">
-					Article
+					<span className={formType === "article" ? "text-mainlight" : "text-white"}>Article</span>
 				</label>
 			</div>
 			{formType === "journal" ? <JournalForm /> : null}
