@@ -3,9 +3,9 @@ import React from "react";
 export default function JournalForm() {
 	return (
 		<div>
-			<h2>Journal application</h2>
-			<form action="" method="post" className="flex flex-col text-xl m-10 pb-20">
-				<div className="flex flex-col py-5">
+			<h2 className="m-10 text-4xl text-center">Journal application</h2>
+			<form action="" method="post" className="flex flex-col text-xl m-10 pb-20 mt-5">
+				<div className="flex flex-col pb-5">
 					<h3 className="text-4xl text-mainlight">Information about you</h3>
 					<label htmlFor="author">Full Name</label>
 					<input type="text" id="author" name="author" required className="formfield"></input>
