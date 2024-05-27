@@ -3,8 +3,8 @@ import React from "react";
 export default function JournalForm() {
 	return (
 		<div>
-			<h2 className="m-10 text-4xl text-center text-mainlight">Journal application</h2>
-			<form action="/api/issueSubmission" method="post" className="flex flex-col text-xl m-10 pb-20 mt-5">
+			<h2 className="m-10 text-4xl text-center text-mainlight">Journal Application</h2>
+			<form action="/api/issueSubmission" method="post" className="flex flex-col text-2xl m-10 pb-20 mt-5">
 				<div className="flex flex-col pb-5">
 					<h3 className="text-4xl text-mainlight">Information about you</h3>
 					<label htmlFor="author">Full Name</label>
@@ -97,7 +97,8 @@ export default function JournalForm() {
 							className="text-mainlight">
 							this form (link not updated yet)
 						</a>
-						, signed by your Principal Investigator.
+						, signed by your Principal Investigator. <br></br>
+						*Make sure that anyone with the link can view!
 					</label>
 					<input type="text" id="approval" name="approval" required className="formfield"></input>
 				</div>

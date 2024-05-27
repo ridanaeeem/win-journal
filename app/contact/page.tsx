@@ -9,7 +9,7 @@ export default function Contact() {
 				<h1 className="subtitle">Contact Us</h1>
 				<div className="flex">
 					<div className="w-full">
-						<p className="m-10 text-xl">
+						<p className="m-10 text-2xl">
 							Need to get in touch with us? For general inquiries about the Undergarduate Journal of
 							Neuroscience or Women In Neuroscience, feel free to fill out the form to the right, email us
 							at{" "}
@@ -22,10 +22,10 @@ export default function Contact() {
 							</a>{" "}
 							on Instagram.
 						</p>
-						<p className="m-10 mb-0 text-xl">
+						<p className="m-10 mb-0 text-2xl">
 							For specific inquiries, feel free to reach out to the following contacts:
 						</p>
-						<div className="m-10 mt-0 text-xl">
+						<div className="m-10 mt-0 text-2xl">
 							<ul className="list-disc pl-5">
 								<li>
 									President:{" "}

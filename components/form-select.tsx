@@ -11,7 +11,7 @@ export default function FormSelect() {
 	};
 
 	return (
-		<div className="p-5 text-2xl">
+		<div className="py-5 text-2xl">
 			<p>Please select which application you would like to complete:</p>
 			<div className="flex flex-row">
 				<input

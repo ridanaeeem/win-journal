@@ -4,7 +4,7 @@ export default function ContactForm() {
 	return (
 		<div>
 			<h2 className="m-10 mb-0 text-4xl text-mainlight">Contact Form</h2>
-			<form action="/api/contact" method="post" className="flex flex-col text-xl m-10 mt-0">
+			<form action="/api/contact" method="post" className="flex flex-col text-2xl m-10 mt-0">
 				<div className="flex flex-col pb-5">
 					<label htmlFor="name">Name</label>
 					<input type="text" id="name" name="name" required className="formfield"></input>
