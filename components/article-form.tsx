@@ -4,7 +4,7 @@ export default function ArticleForm() {
 	return (
 		<div>
 			<h2 className="m-10 text-4xl text-center text-mainlight">Article Application</h2>
-			<form action="/api/articleSubmission" method="post" className="flex flex-col text-2xl m-10 pb-20 mt-5">
+			<form action="/api/articleSubmission" method="post" className="flex flex-col text-2xl m-10 mt-5">
 				<div className="flex flex-col pb-5">
 					<h3 className="text-4xl text-mainlight">Information about you</h3>
 					<label htmlFor="author">Full Name</label>
@@ -58,7 +58,7 @@ export default function ArticleForm() {
 					<input type="text" id="approval" name="approval" required className="formfield"></input>
 				</div>
 
-				<button type="submit" className="rounded-xl bg-mainlight mx-auto p-5 px-10">
+				<button type="submit" className="rounded-xl bg-mainlight mx-auto p-5 px-10 mt-5">
 					Submit
 				</button>
 			</form>
