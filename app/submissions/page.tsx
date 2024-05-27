@@ -1,5 +1,6 @@
 import React from "react";
 import JournalForm from "@/components/journal-form";
+import ArticleForm from "@/components/article-form";
 
 export default function Submissions() {
 	return (
@@ -22,7 +23,8 @@ export default function Submissions() {
 
 				<p className="p-5 text-2xl">
 					The review process will take approximately 2-3 weeks. If your article is accepted, you will be
-					notified via email. If you have any questions or concerns, please reach out to us at{" "}
+					notified via email. If you have any questions or concerns, feel free to fill out our contact form or
+					reach out to us at{" "}
 					<a href="mailto:buwin@bu.edu" className="text-mainlight">
 						buwin@bu.edu
 					</a>
@@ -51,6 +53,7 @@ export default function Submissions() {
 					</iframe> */}
 
 				<JournalForm />
+				<ArticleForm />
 			</main>
 		</div>
 	);
