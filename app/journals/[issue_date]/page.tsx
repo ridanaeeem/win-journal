@@ -32,7 +32,7 @@ export default async function Journal({ params }: { params: { issue_date: any } 
 	return (
 		<div>
 			<title>{issueDate}</title>
-			<main className="min-h-screen">
+			<main className="min-h-screen flex flex-col">
 				<div className="subtitle">
 					Issue {journal.issue}: {issueDate}
 				</div>
