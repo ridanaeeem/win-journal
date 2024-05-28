@@ -2,8 +2,9 @@
 import Link from "next/link";
 import { Article } from "@/types";
 import useSWR from "swr";
+import ArticleBanner from "@/components/article-banner";
 
-export default function ArticleDisplay({ issueDate }: { issueDate: string }) {
+export default function ArticlesDisplay({ issueDate }: { issueDate: string }) {
 	const { data, error } = useSWR("/api/articles", (url: string) => fetch(url).then((res) => res.json()));
 	console.log("logging data");
 	console.log(data);
@@ -14,22 +15,19 @@ export default function ArticleDisplay({ issueDate }: { issueDate: string }) {
 
 	return (
 		<div>
-			<h1>Journal Entries</h1>
-			<ul>
+			<div className="">
 				{issueArticles.map((article: Article, i: number) => (
-					<div key={i}>
-						<h1 className="text-3xl">{article.title}</h1>
-						<p>{article.keywords}</p>
-						<p>{article.content}</p>
-						<div>{article.introduction}</div>
-						<div>{article.methods}</div>
-						<div>{article.results}</div>
-						<div>{article.discussion}</div>
-						<div>{article.acknowledgements}</div>
-						<div>{article.references}</div>
+					<div
+						key={i}
+						className={
+							i % 2 == 0
+								? "transition ease-in-out delay-150 bg-gradient-to-r from-indigo-800 to-mainbg hover:bg-gradient-to-r hover:from-indigo-800 hover:to-indigo-800 duration-300"
+								: "transition ease-in-out delay-150 bg-indigo-700 hover:bg-indigo-900 duration-300"
+						}>
+						<ArticleBanner article={article} />
 					</div>
 				))}
-			</ul>
+			</div>
 		</div>
 	);
 }

@@ -1,6 +1,6 @@
 import type { Journal } from "@/types";
 import JournalDisplay from "@/components/journal-display";
-import ArticleDisplay from "@/components/article-display";
+import ArticlesDisplay from "@/components/articles-display";
 
 // the dates of currently published issues - automate this
 export async function generateStaticParams() {
@@ -37,7 +37,7 @@ export default async function Journal({ params }: { params: { issue_date: any } 
 					Issue {journal.issue}: {issueDate}
 				</div>
 				<JournalDisplay path={journal.path} />
-				<ArticleDisplay issueDate={journal.issue_date} />
+				<ArticlesDisplay issueDate={journal.issue_date} />
 			</main>
 		</div>
 	);
