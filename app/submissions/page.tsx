@@ -16,6 +16,7 @@ export default function Submissions() {
 						please make sure your article adheres to the format and guidelines outlined in{" "}
 						<a
 							href="https://docs.google.com/document/d/1wekOQ_Q9t2EQ_3mdYEgwyDzdSS9esw1C3d0iuAf_vwc/edit?usp=sharing"
+							target="_blank"
 							className="text-mainlight">
 							this document
 						</a>

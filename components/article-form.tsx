@@ -50,7 +50,8 @@ export default function ArticleForm() {
 						Provide the Google drive link to{" "}
 						<a
 							href="https://docs.google.com/document/d/1wekOQ_Q9t2EQ_3mdYEgwyDzdSS9esw1C3d0iuAf_vwc/edit?usp=sharing"
-							className="text-mainlight">
+							className="text-mainlight"
+							target="_blank">
 							this form (link not updated yet)
 						</a>
 						, signed by your Principal Investigator.<br></br>
