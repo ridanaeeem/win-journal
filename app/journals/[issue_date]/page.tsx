@@ -1,5 +1,6 @@
 import type { Journal } from "@/types";
 import JournalDisplay from "@/components/journal-display";
+import ArticleDisplay from "@/components/article-display";
 
 // the dates of currently published issues - automate this
 export async function generateStaticParams() {
@@ -24,13 +25,20 @@ async function getJournal(params: { issue_date: string }) {
 // inputs from generateStaticParams()
 export default async function Journal({ params }: { params: { issue_date: any } }) {
 	const journal = await getJournal(params);
-
+	const issueDate = journal.issue_date
+		.split("-")
+		.map((word: any) => word.charAt(0).toUpperCase() + word.slice(1))
+		.join(" ");
 	return (
 		<div>
-			{journal.issue}
-			{journal.issue_date}
-			{journal.path}
-			<JournalDisplay path={journal.path} />
+			<title>{issueDate}</title>
+			<main className="min-h-screen">
+				<div className="subtitle">
+					Issue {journal.issue}: {issueDate}
+				</div>
+				<JournalDisplay path={journal.path} />
+				<ArticleDisplay issueDate={journal.issue_date} />
+			</main>
 		</div>
 	);
 }

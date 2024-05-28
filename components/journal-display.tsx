@@ -31,7 +31,7 @@ export default function JournalDisplay({ path }: { path: string }) {
 	// use HTMLFlipBook to display rendered pdf as a flipbook
 	return (
 		<div>
-			<div className="z-10 py-[10rem] bg-black">
+			<div className="z-10 py-[5rem] bg-mainbg">
 				<HTMLFlipBook
 					width={600}
 					height={850}

@@ -1,9 +1,7 @@
-// "use client";
-import ArticleDisplay from "@/components/article-display";
 import Link from "next/link";
 // import { Journal } from "@/types";
 // import { useState } from "react";
-import useSWR from "swr";
+// import useSWR from "swr";
 
 export default function Journals() {
 	// const { data, error } = useSWR("/api/journal", (url: string) => fetch(url).then((res) => res.json()));
@@ -22,7 +20,6 @@ export default function Journals() {
 					<Link href="/journals/spring-2024">Spring 2024</Link>
 					<Link href="/journals/fall-2025">Fall 2025</Link>
 				</div>
-				<ArticleDisplay />
 			</main>
 		</div>
 	);

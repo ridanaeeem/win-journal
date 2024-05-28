@@ -3,19 +3,20 @@ import Link from "next/link";
 import { Article } from "@/types";
 import useSWR from "swr";
 
-export default function ArticleDisplay() {
+export default function ArticleDisplay({ issueDate }: { issueDate: string }) {
 	const { data, error } = useSWR("/api/articles", (url: string) => fetch(url).then((res) => res.json()));
 	console.log("logging data");
 	console.log(data);
 	if (error) return <div>failed to load</div>;
 	if (!data) return <div>loading...</div>;
 	const articles = data;
+	const issueArticles = articles.filter((article: Article) => article.issue_date === issueDate);
 
 	return (
 		<div>
 			<h1>Journal Entries</h1>
 			<ul>
-				{articles.map((article: Article, i: number) => (
+				{issueArticles.map((article: Article, i: number) => (
 					<div key={i}>
 						<h1 className="text-3xl">{article.title}</h1>
 						<p>{article.keywords}</p>
