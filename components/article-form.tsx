@@ -53,7 +53,8 @@ export default function ArticleForm() {
 							className="text-mainlight">
 							this form (link not updated yet)
 						</a>
-						, signed by your Principal Investigator.
+						, signed by your Principal Investigator.<br></br>
+						*Make sure that anyone with the link can view!
 					</label>
 					<input type="text" id="approval" name="approval" required className="formfield"></input>
 				</div>
