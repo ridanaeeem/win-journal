@@ -16,12 +16,20 @@ export default function Home() {
 				</div>
 				<div className="w-full bg-white text-black p-24 text-xl min-h-[40vh] text-center text-2xl">
 					<h3>
-						Our journal serves as a platform for showcasing neuroscience research conducted by Boston
-						University students.
+						Welcome to the Undergraduate Journal of Neuroscience at Boston University! Our mission is to
+						provide a platform for undergraduates to display their research and passion for neuroscience. In
+						this journal, we provide students with the opportunity to showcase all the hardwork and
+						dedication they&apos;ve put into their time at research labs, summer programs, and even in-class
+						labs. This journal allows students to practice and engage in scientific writing, which is an
+						incredibly beneficial process for a multitude of career paths. We invite students of all
+						different backgrounds to submit a research article regardless of whether they&apos;ve done
+						research specifically at BU. We strive to give students the recognition they deserve as
+						undergraduates pursuing a future in science, and through this journal, we hope to provide an
+						insight into the true potential of our student population.
 					</h3>
 				</div>
 				<div className="w-full p-24 text-xl">
-					<h3>Journal description 2, probably put the latest one here as flippable pdf or something</h3>
+					<h3>Check out our latest edition!</h3>
 				</div>
 			</main>
 		</div>
