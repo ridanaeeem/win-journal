@@ -23,22 +23,16 @@ export default function Submissions() {
 						many articles as they would like, and they do not have to submit all three subtypes of articles.
 					</p>
 					<Collapsible
-						title={"Research Article"}
-						description={
-							"A research article is the standard paper you would see in an academic journal. Students who have conducted research at a BU lab or outside a BU lab are encouraged to submit a paper on what they accomplished during their time as an undergraduate researcher. Students will follow a provided format where they will write an abstract, introduction, methods, results, discussion, and conclusion based on what they completed. If the student did not get the chance to collect data or analyze data, they are still welcome to use the provided guidelines to describe what their role was in their lab. Students will be required to submit a permission form signed by their PI if they plan on displaying or writing about results from a lab."
-						}
+						title="Research Article"
+						description="A research article is the standard paper you would see in an academic journal. Students who have conducted research at a BU lab or outside a BU lab are encouraged to submit a paper on what they accomplished during their time as an undergraduate researcher. Students will follow a provided format where they will write an abstract, introduction, methods, results, discussion, and conclusion based on what they completed. If the student did not get the chance to collect data or analyze data, they are still welcome to use the provided guidelines to describe what their role was in their lab. Students will be required to submit a permission form signed by their PI if they plan on displaying or writing about results from a lab."
 					/>
 					<Collapsible
-						title={"Topics Article"}
-						description={
-							"A topics article is similar to a review paper where students will write about a topic in neuroscience they are passionate about. This paper must be supported by peer reviewed academic sources, and the topic must be related to neuroscience. Other than these requirements and a word limit, students have the freedom of engaging in whatever topic they choose. This is the perfect opportunity for students who have not yet gotten the chance to conduct research or for those who are simply fascinated by the field of neuroscience! These articles will be published at the beginning of the journal, followed by the rest of the research articles."
-						}
+						title="Topics Article"
+						description="A topics article is similar to a review paper where students will write about a topic in neuroscience they are passionate about. This paper must be supported by peer reviewed academic sources, and the topic must be related to neuroscience. Other than these requirements and a word limit, students have the freedom of engaging in whatever topic they choose. This is the perfect opportunity for students who have not yet gotten the chance to conduct research or for those who are simply fascinated by the field of neuroscience! These articles will be published at the beginning of the journal, followed by the rest of the research articles."
 					/>
 					<Collapsible
-						title={"NE203 Article"}
-						description={
-							"An NE203 article is a research article displaying research conducted within the NE203 lab. This Principles of Neuroscience course is one of the core major requirements in the Undergraduate Program of Neuroscience. In the lab component, students participate in inquiry-based experiments on animal models where they are required to develop an independent research project. This project is then developed into a grant proposal that is submitted for grading. Here, we offer students the ability to repurpose their grant proposal into a research article that displays their initial findings of their topic. This is a great opportunity for students to demonstrate how their work from an in-class lab can be translated into concrete skills for other research programs."
-						}
+						title="NE203 Article"
+						description="An NE203 article is a research article displaying research conducted within the NE203 lab. This Principles of Neuroscience course is one of the core major requirements in the Undergraduate Program of Neuroscience. In the lab component, students participate in inquiry-based experiments on animal models where they are required to develop an independent research project. This project is then developed into a grant proposal that is submitted for grading. Here, we offer students the ability to repurpose their grant proposal into a research article that displays their initial findings of their topic. This is a great opportunity for students to demonstrate how their work from an in-class lab can be translated into concrete skills for other research programs."
 					/>
 
 					{/* <p className="p-5 pl-10 text-2xl">

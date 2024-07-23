@@ -10,7 +10,7 @@ export default function Collapsible({ title, description }: { title: string; des
 
 	return (
 		<div className="">
-			<button className="py-3 text-3xl text-mainlight" onClick={handleCollapsible}>
+			<button className="py-3 text-3xl text-mainlight text-left" onClick={handleCollapsible}>
 				<div className="">
 					{title} <span className="text-lg text-mainlight">{isOpen ? "▲" : "▼"}</span>
 				</div>
