@@ -12,7 +12,7 @@ export default function AuthorsDisplay() {
 	if (error) return <div>failed to load</div>;
 	if (!data) return <div className="text-center">loading...</div>;
 	const authors = data;
-	// const validAuthors = authors.filter((article: Author) => article.email !== "");
+	// const validAuthors = authors.filter((author: Author) => author.published === True);
 
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-10">
@@ -33,8 +33,8 @@ export default function AuthorsDisplay() {
 							className="rounded-full object-cover"
 						/>
 						<div>
-							<div className="text-lg font-semibold">{author.name}</div>
-							<div className="text-sm text-gray-300">{author.email}</div>
+							<div className="text-xl font-semibold">{author.name}</div>
+							<div className="text-md text-gray-300">{author.email}</div>
 						</div>
 					</div>
 				</Link>
