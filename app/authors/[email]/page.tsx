@@ -26,7 +26,12 @@ export default async function Journal({ params }: { params: { email: string } })
 	return (
 		<div>
 			{!author ? (
-				<div>Author not found</div>
+				<div>
+					<title>Not Found</title>
+					<main className="min-h-screen flex flex-col">
+						<div className="subtitle">Author Not Found</div>
+					</main>
+				</div>
 			) : (
 				<div>
 					<title>{author.name}</title>
