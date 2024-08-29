@@ -10,7 +10,7 @@ export default function AuthorsDisplay() {
 	console.log("logging data");
 	console.log(data);
 	if (error) return <div>failed to load</div>;
-	if (!data) return <div>loading...</div>;
+	if (!data) return <div className="text-center">loading...</div>;
 	const authors = data;
 	// const validAuthors = authors.filter((article: Author) => article.email !== "");
 
