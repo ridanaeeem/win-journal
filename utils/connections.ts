@@ -10,6 +10,7 @@ const DB_JOURNALS = process.env.DB_JOURNALS;
 const DB_COLLECTION = process.env.DB_COLLECTION;
 const DB_SUBMITTED_ISSUE = process.env.DB_SUBMITTEDISSUE;
 const DB_SUBMITTED_ARTICLE = process.env.DB_SUBMITTEDARTICLE;
+const DB_AUTHORS = process.env.DB_AUTHORS;
 
 // getting all of the journals
 // connection function
@@ -140,4 +141,23 @@ export const contactDBConnect = async () => {
 		mongoose.models.ContactSubmission || mongoose.model("ContactSubmission", ContactSchema, DB_SUBMITTED_ARTICLE);
 
 	return { conn, ContactSubmission };
+};
+
+// connection function for authors
+export const authorsDBConnect = async () => {
+	const conn = await mongoose.connect(MONGODB_URL as string).catch((err) => console.log(err));
+	if (!conn) {
+		console.log("Connection Error");
+		throw new Error("Connection Error");
+	}
+
+	// create schema
+	const AuthorSchema = new mongoose.Schema({
+		name: { type: String, required: true },
+		email: { type: String, required: true },
+	});
+
+	const Author = mongoose.models.Author || mongoose.model("Author", AuthorSchema, DB_AUTHORS);
+
+	return { conn, Author };
 };

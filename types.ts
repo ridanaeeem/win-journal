@@ -21,3 +21,10 @@ export type Journal = {
 	issue_date: string;
 	path: string;
 };
+
+export type Author = {
+	_id: string;
+	name: string;
+	email: string;
+	// articles: Article[];
+};
