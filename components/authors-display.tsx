@@ -10,12 +10,12 @@ export default function AuthorsDisplay() {
 	if (error) return <div>failed to load</div>;
 	if (!data) return <div>loading...</div>;
 	const authors = data;
-	const issueArticles = authors.filter((article: Author) => article.email !== "");
+	// const validAuthors = authors.filter((article: Author) => article.email !== "");
 
 	return (
 		<div>
 			<div className="">
-				{issueArticles.map((author: Author, i: number) => (
+				{authors.map((author: Author, i: number) => (
 					<Link key={i} href={`/authors/${author.email.slice(0, -7)}`}>
 						<div
 							key={i}
