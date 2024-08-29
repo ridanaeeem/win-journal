@@ -15,7 +15,7 @@ export default function AuthorsDisplay() {
 	// const validAuthors = authors.filter((article: Author) => article.email !== "");
 
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-10">
 			{authors.map((author: Author, i: number) => (
 				<Link key={i} href={`/authors/${author.email.slice(0, -7)}`} className="no-underline">
 					<div
