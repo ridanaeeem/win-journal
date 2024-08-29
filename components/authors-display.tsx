@@ -16,17 +16,19 @@ export default function AuthorsDisplay() {
 		<div>
 			<div className="">
 				{issueArticles.map((author: Author, i: number) => (
-					<div
-						key={i}
-						className={
-							i % 2 == 0
-								? "transition ease-in-out delay-150 bg-gradient-to-r from-indigo-800 to-mainbg hover:bg-gradient-to-r hover:from-indigo-800 hover:to-indigo-800 duration-300"
-								: "transition ease-in-out delay-150 bg-indigo-700 hover:bg-indigo-900 duration-300"
-						}>
-						{author.name}
-						<br></br>
-						{author.email}
-					</div>
+					<Link key={i} href={`/authors/${author.email.slice(0, -7)}`}>
+						<div
+							key={i}
+							className={
+								i % 2 == 0
+									? "transition ease-in-out delay-150 bg-gradient-to-r from-indigo-800 to-mainbg hover:bg-gradient-to-r hover:from-indigo-800 hover:to-indigo-800 duration-300"
+									: "transition ease-in-out delay-150 bg-indigo-700 hover:bg-indigo-900 duration-300"
+							}>
+							{author.name}
+							<br></br>
+							{author.email}
+						</div>
+					</Link>
 				))}
 			</div>
 		</div>
