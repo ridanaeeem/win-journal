@@ -1,12 +1,11 @@
-import Link from "next/link";
-import logo from "@/public/winLogo.png";
-import Image from "next/image";
+import Login from "@/components/login";
 
 export default function Home() {
 	return (
 		<div>
 			<title>Home</title>
 			<main className="bg-gradient flex flex-col justify-between">
+				<Login />
 				<div className="flex w-full min-h-[40vh]">
 					<div>{/* <Image src={logo} alt="WIN logo" layout={"responsive"} /> */}</div>
 					<div className="p-24">
